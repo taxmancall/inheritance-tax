@@ -627,81 +627,97 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
 <div class="sec head-blue" id="checklist">
   <div class="sec-head">
     <span class="sec-num">✓</span>
-    <div><div class="sec-title">상속세 신고 준비서류 체크리스트</div>
-    <div class="sec-sub">해당하는 항목에 체크하시고 준비되신 서류부터 챙겨주세요</div></div>
+    <div><div class="sec-title">상속세 신고 준비서류 (1차 요청 자료)</div>
+    <div class="sec-sub">(필수)는 꼭 준비해 주시고, (해당시)는 본인 상황에 해당할 때만 준비하시면 됩니다</div></div>
   </div>
   <div class="sec-body">
     <div style="text-align:right;margin-bottom:10px">
-      <button id="downloadChecklistBtn" style="background:var(--b1);color:#fff;border:none;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer;">📄 PDF로 다운로드</button>
+      <a href="https://taxmancall.com/inheritance-tax-checklist/" style="display:inline-block;background:var(--b1);color:#fff;text-decoration:none;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:700;">✓ 자가진단하고 PDF로 정리하기</a>
     </div>
-    <div id="checklist-content">
-    <div class="check-meta">
-      <div class="check-meta-item">성명: ______________</div>
-      <div class="check-meta-item">상속개시일(사망일): ______________</div>
-      <div class="check-meta-item">담당자: ______________</div>
-    </div>
+    <div class="info-box">아래 목록을 눈으로 확인만 하셔도 되고, 위 버튼을 누르면 항목별로 체크하면서 준비 현황을 PDF로 정리해 사무소로 바로 보내실 수 있습니다.</div>
 
     <div class="check-cat">① 기본서류</div>
+    <div style="font-size:13px;font-weight:700;color:var(--b1);margin:10px 0 2px;">피상속인(돌아가신 분) 서류</div>
     <div class="check-grid">
-      <div class="check-item"><span class="check-box"></span>사망진단서 (또는 시체검안서)</div>
-      <div class="check-item"><span class="check-box"></span>가족관계증명서·기본증명서 (상세)</div>
-      <div class="check-item"><span class="check-box"></span>제적등본 <span class="check-note">(필요시)</span></div>
-      <div class="check-item"><span class="check-box"></span>상속인 전원 신분증 사본</div>
-      <div class="check-item"><span class="check-box"></span>상속재산분할협의서 <span class="check-note">(작성한 경우)</span></div>
-      <div class="check-item"><span class="check-box"></span>대습상속 관련 확인서류 <span class="check-note">(해당 시)</span></div>
+      <div class="check-item"><span class="check-box"></span>사망진단서 <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span> <span class="check-note">(또는 시체검안서)</span></div>
+      <div class="check-item"><span class="check-box"></span>주민등록말소자 등본(초본) <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span> <span class="check-note">(최종 주소·사망일 확인용)</span></div>
+      <div class="check-item"><span class="check-box"></span>제적등본 <span class="check-note">(해당시)</span> <span class="check-note">(2008년 이전 사망·대습상속 등)</span></div>
+      <div class="check-item"><span class="check-box"></span>유언장 사본 <span class="check-note">(해당시)</span> <span class="check-note">(있는 경우에 한함)</span></div>
+    </div>
+    <div style="font-size:13px;font-weight:700;color:var(--b1);margin:10px 0 2px;">상속인 서류</div>
+    <div class="check-grid">
+      <div class="check-item"><span class="check-box"></span>상속인 전원 신분증 사본 <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span> <span class="check-note">(미성년자는 기본증명서로 갈음)</span></div>
+      <div class="check-item"><span class="check-box"></span>상속인 전원 주민등록등본 <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span> <span class="check-note">(세대 구성 확인용)</span></div>
+      <div class="check-item"><span class="check-box"></span>상속재산분할협의서 <span class="check-note">(해당시)</span> <span class="check-note">(작성한 경우)</span></div>
+      <div class="check-item"><span class="check-box"></span>대습상속 관련 확인서류 <span class="check-note">(해당시)</span></div>
+    </div>
+    <div style="font-size:13px;font-weight:700;color:var(--b1);margin:10px 0 2px;">공통 서류</div>
+    <div class="check-grid">
+      <div class="check-item"><span class="check-box"></span>가족관계증명서·기본증명서 <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span> <span class="check-note">(피상속인·상속인 전원, 상세)</span></div>
+      <div class="check-item"><span class="check-box"></span>안심상속 원스톱서비스 결과지 <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span> <span class="check-note">(정부24·주민센터, 사망월 말일부터 6개월 내 신청)</span></div>
     </div>
 
     <div class="check-cat">② 부동산</div>
     <div class="check-grid">
-      <div class="check-item"><span class="check-box"></span>등기부등본 (전체 부동산)</div>
-      <div class="check-item"><span class="check-box"></span>토지대장·건축물대장</div>
-      <div class="check-item"><span class="check-box"></span>공시가격 확인자료</div>
-      <div class="check-item"><span class="check-box"></span>임대차계약서 <span class="check-note">(임대 중인 경우)</span></div>
+      <div class="check-item"><span class="check-box"></span>등기부등본 (전체 부동산) <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span></div>
+      <div class="check-item"><span class="check-box"></span>토지대장·건축물대장 <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span></div>
+      <div class="check-item"><span class="check-box"></span>공시가격 확인자료 <span class="check-note">(해당시)</span> <span class="check-note">(없으면 사무소에서 조회 가능)</span></div>
+      <div class="check-item"><span class="check-box"></span>임대차계약서 <span class="check-note">(해당시)</span> <span class="check-note">(임대 중인 경우)</span></div>
+      <div class="check-item"><span class="check-box"></span>부가가치세 임대공급가액명세서 <span class="check-note">(해당시)</span> <span class="check-note">(임대사업자인 경우)</span></div>
+      <div class="check-item"><span class="check-box"></span>조합원입주권 관련 서류 <span class="check-note">(해당시)</span></div>
+      <div class="check-item"><span class="check-box"></span>분양권 관련 서류 <span class="check-note">(해당시)</span></div>
+      <div class="check-item"><span class="check-box"></span>골프·콘도 등 회원권 증서 <span class="check-note">(해당시)</span></div>
+      <div class="check-item"><span class="check-box"></span>최근 10년간 부동산 양도·취득내역 <span class="check-note">(해당시)</span> <span class="check-note">(사무소에서 조회 가능)</span></div>
     </div>
 
-    <div class="check-cat">③ 금융재산</div>
+    <div class="check-cat">③ 차량·사업 등 기타재산</div>
     <div class="check-grid">
-      <div class="check-item"><span class="check-box"></span>전 금융기관 사망일 기준 잔액증명서 (원본)</div>
-      <div class="check-item"><span class="check-box"></span>사망일 전후 1~2년 거래내역 <span class="check-note">(추정상속재산 확인용)</span></div>
-      <div class="check-item"><span class="check-box"></span>보험금 지급명세서·보험계약 확인서</div>
-      <div class="check-item"><span class="check-box"></span>주식 잔고증명서 (상장주식)</div>
-      <div class="check-item"><span class="check-box"></span>비상장주식 평가자료 (최근 3개년 재무제표 등)</div>
+      <div class="check-item"><span class="check-box"></span>자동차등록증(등록원부) <span class="check-note">(해당시)</span> <span class="check-note">(보험증서 포함)</span></div>
+      <div class="check-item"><span class="check-box"></span>선박원부·어선원부·항공기등록원부 <span class="check-note">(해당시)</span></div>
+      <div class="check-item"><span class="check-box"></span>사업자등록증 사본 <span class="check-note">(해당시)</span> <span class="check-note">(피상속인 사업체가 있는 경우)</span></div>
+      <div class="check-item"><span class="check-box"></span>기타 재산 관련 서류 <span class="check-note">(해당시)</span> <span class="check-note">(골동품·귀금속 등)</span></div>
     </div>
 
-    <div class="check-cat">④ 채무·공과금</div>
+    <div class="check-cat">④ 금융재산</div>
     <div class="check-grid">
-      <div class="check-item"><span class="check-box"></span>금융기관 부채증명원</div>
-      <div class="check-item"><span class="check-box"></span>임대보증금 반환채무 내역</div>
-      <div class="check-item"><span class="check-box"></span>미납 세금·공과금 확인자료</div>
-      <div class="check-item"><span class="check-box"></span>장례비용 영수증</div>
+      <div class="check-item"><span class="check-box"></span>전 금융기관 사망일 기준 잔액증명서 <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span> <span class="check-note">(원본)</span></div>
+      <div class="check-item"><span class="check-box"></span>사망일 기준 최근 10년 거래내역 <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span> <span class="check-note">(해지 계좌 포함, 엑셀 권장)</span></div>
+      <div class="check-item"><span class="check-box"></span>보험금 지급명세서·보험계약 확인서 <span class="check-note">(해당시)</span> <span class="check-note">(해약환급금 계산서 포함)</span></div>
+      <div class="check-item"><span class="check-box"></span>퇴직소득원천징수영수증 <span class="check-note">(해당시)</span> <span class="check-note">(사망퇴직금·공로금 등)</span></div>
+      <div class="check-item"><span class="check-box"></span>신탁재산 관련 자료 <span class="check-note">(해당시)</span> <span class="check-note">(신탁잔액증명서 등)</span></div>
+      <div class="check-item"><span class="check-box"></span>주식 잔고증명서 <span class="check-note">(해당시)</span> <span class="check-note">(상장주식·종목코드 포함)</span></div>
+      <div class="check-item"><span class="check-box"></span>비상장주식 평가자료 <span class="check-note">(해당시)</span> <span class="check-note">(최근 3개년 재무제표 등)</span></div>
     </div>
 
-    <div class="check-cat">⑤ 사전증여·기타</div>
+    <div class="check-cat">⑤ 채무·공과금</div>
     <div class="check-grid">
-      <div class="check-item"><span class="check-box"></span>상속개시 전 10년(상속인)·5년(상속인 외) 증여세 신고서</div>
-      <div class="check-item"><span class="check-box"></span>가업·영농상속공제 관련 서류 <span class="check-note">(해당 시)</span></div>
-      <div class="check-item"><span class="check-box"></span>상속포기·한정승인 관련 서류 <span class="check-note">(해당 시)</span></div>
-      <div class="check-item"><span class="check-box"></span>세무대리 위임장</div>
+      <div class="check-item"><span class="check-box"></span>금융기관 부채증명원 <span class="check-note">(해당시)</span> <span class="check-note">(사망일 기준)</span></div>
+      <div class="check-item"><span class="check-box"></span>임대보증금 반환채무 내역 <span class="check-note">(해당시)</span></div>
+      <div class="check-item"><span class="check-box"></span>미납 세금·공과금 확인자료 <span class="check-note">(해당시)</span></div>
+      <div class="check-item"><span class="check-box"></span>신용카드 미납금액 확인자료 <span class="check-note">(해당시)</span> <span class="check-note">(상속인 대신 상환분 포함)</span></div>
+      <div class="check-item"><span class="check-box"></span>병원비 미지급액 확인자료 <span class="check-note">(해당시)</span> <span class="check-note">(일자별 진료비 납입확인서)</span></div>
+      <div class="check-item"><span class="check-box"></span>차용증서 <span class="check-note">(해당시)</span> <span class="check-note">(개인 간 채무가 있는 경우)</span></div>
+      <div class="check-item"><span class="check-box"></span>장례비용 영수증 <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span> <span class="check-note">(납골당·봉안시설 계약서 포함)</span></div>
     </div>
 
-    <div class="check-cat">⑥ 상속 취득세 (부동산이 있는 경우)</div>
+    <div class="check-cat">⑥ 사전증여·기타</div>
     <div class="check-grid">
-      <div class="check-item"><span class="check-box"></span>취득세 신고서 (위택스 또는 서면)</div>
-      <div class="check-item"><span class="check-box"></span>상속인 전원 주민등록등본 <span class="check-note">(1가구1주택 특례 판정용)</span></div>
-      <div class="check-item"><span class="check-box"></span>상속재산분할협의서 (지분 확정용)</div>
-      <div class="check-item"><span class="check-box"></span>농지 자경 확인서류 <span class="check-note">(자경감면 해당 시)</span></div>
+      <div class="check-item"><span class="check-box"></span>상속개시 전 10년(상속인)·5년(상속인 외) 증여세 신고서 <span class="check-note">(해당시)</span></div>
+      <div class="check-item"><span class="check-box"></span>가업·영농상속공제 관련 서류 <span class="check-note">(해당시)</span></div>
+      <div class="check-item"><span class="check-box"></span>상속포기·한정승인 관련 서류 <span class="check-note">(해당시)</span></div>
+      <div class="check-item"><span class="check-box"></span>세무대리 위임장 <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span> <span class="check-note">(상속인 전원 날인)</span></div>
     </div>
 
-    <div class="check-cat">⑦ 거주자·비거주자 판정이 필요한 경우</div>
+    <div class="check-cat">⑦ 거주자·비거주자 판정 <span class="check-note" style="font-weight:400">— 해외 거주 이력이 있는 경우만</span></div>
     <div class="check-grid">
-      <div class="check-item"><span class="check-box"></span>출입국사실증명 (최근 5년)</div>
-      <div class="check-item"><span class="check-box"></span>외국인등록사실증명 <span class="check-note">(해당 시)</span></div>
-      <div class="check-item"><span class="check-box"></span>해외 재직증명서 또는 소득 증빙</div>
-      <div class="check-item"><span class="check-box"></span>가족 거주지 확인자료</div>
+      <div class="check-item"><span class="check-box"></span>출입국사실증명서 <span class="check-note">(해당시)</span> <span class="check-note">(최근 5년)</span></div>
+      <div class="check-item"><span class="check-box"></span>외국인등록사실증명서 <span class="check-note">(해당시)</span></div>
+      <div class="check-item"><span class="check-box"></span>해외 재직증명서 또는 소득 증빙 <span class="check-note">(해당시)</span></div>
+      <div class="check-item"><span class="check-box"></span>가족 거주지 확인자료 <span class="check-note">(해당시)</span></div>
     </div>
 
-    <div class="info-box" style="margin-top:16px">체크리스트는 인쇄 후 수기로 표시하며 사용하실 수 있습니다. 해당 항목이 없으면 건너뛰셔도 됩니다.</div>
-    </div>
+    <div class="info-box" style="margin-top:16px">국민연금법·공무원연금법·군인연금법·사립학교교직원연금법상 유족연금, 산업재해보상보험법상 유족보상연금·일시금, 근로기준법상 유족보상금은 상속재산에 포함되지 않으므로 준비하지 않으셔도 됩니다 (상속세 및 증여세법 제10조 단서).</div>
+    <div class="tip-box">위 목록에 없는 서류가 있거나 준비가 어려운 항목이 있으면, <a href="https://taxmancall.com/inheritance-tax-checklist/" style="color:var(--b1);font-weight:700;">자가진단 페이지</a>의 메모란에 적어주시거나 사무소(032-321-4521)로 문의해 주세요.</div>
   </div>
 </div>
 
@@ -805,31 +821,5 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
   정확한 세무 처리는 담당 세무사와 상담하시기 바랍니다.
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-<script>
-document.getElementById('downloadChecklistBtn').addEventListener('click', function () {
-  var btn = this;
-  var el = document.getElementById('checklist-content');
-  btn.disabled = true;
-  var originalText = btn.textContent;
-  btn.textContent = '생성 중...';
-  var opt = {
-    margin: [8, 8, 8, 8],
-    filename: '상속세_신고_준비서류_체크리스트.pdf',
-    image: { type: 'jpeg', quality: 0.98 },
-    html2canvas: { scale: 2, useCORS: true },
-    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-    pagebreak: { mode: ['css', 'legacy'] }
-  };
-  html2pdf().set(opt).from(el).save().then(function () {
-    btn.disabled = false;
-    btn.textContent = originalText;
-  }).catch(function () {
-    btn.disabled = false;
-    btn.textContent = originalText;
-    alert('PDF 생성에 실패했습니다. 다시 시도해 주세요.');
-  });
-});
-</script>
 </body>
 </html>
