@@ -192,6 +192,16 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
   .flow{gap:4px}
   .flow-box{min-width:80px;padding:8px 8px;font-size:12px}
 }
+
+/* 맨 위로 버튼 */
+#topBtn{position:fixed;right:18px;bottom:22px;width:48px;height:48px;border:none;border-radius:50%;
+  background:var(--b1);color:#fff;font-size:18px;line-height:1;cursor:pointer;
+  box-shadow:0 4px 14px rgba(0,0,0,.28);opacity:0;visibility:hidden;
+  transition:opacity .25s,visibility .25s,transform .15s;z-index:1000;display:flex;align-items:center;justify-content:center;}
+#topBtn.show{opacity:1;visibility:visible;}
+#topBtn:hover{transform:translateY(-2px);}
+#topBtn:active{transform:translateY(0);}
+@media(max-width:600px){#topBtn{right:14px;bottom:16px;width:44px;height:44px;}}
 </style>
 </head>
 <body>
@@ -203,8 +213,10 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
     <p class="header-sub">상속인·대습상속 / 거주자·비거주자 / 재산범위 / 평가 / 공제 / 세율·계산 / 신고납부까지</p>
   </div>
   <nav class="nav-bar">
+    <a href="#start" style="font-weight:700;">시작하기</a>
     <a href="#s01">상속세란?</a>
     <a href="#s02">상속인·대습상속</a>
+    <a href="#bequest">유증·사인증여</a>
     <a href="#s03">거주자/비거주자</a>
     <a href="#s04">상속재산 범위</a>
     <a href="#s05">재산평가</a>
@@ -215,6 +227,8 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
     <a href="#s10">사전증여 합산</a>
     <a href="#s11">신고·납부</a>
     <a href="#s12">상속 취득세</a>
+    <a href="#after">신고 이후 소득세</a>
+    <a href="#pension">유족연금</a>
     <a href="#checklist">준비서류 체크리스트</a>
     <a href="#case">계산사례</a>
     <a href="#qa">Q&amp;A</a>
@@ -224,6 +238,41 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
 <div class="container">
 
 <div class="disclaimer">본 자료는 상담용 참고자료입니다. 실제 세액은 개별 사실관계에 따라 달라질 수 있으며, 2025년 12월 국회를 통과한 개정세법(2026.1.1. 시행분) 기준으로 작성되었습니다. 상속세 과세방식을 유산세에서 유산취득세로 전환하는 방안과 자녀공제 확대 등은 2025년 정기국회에서 추후 재논의하기로 하고 이번 개정에는 반영되지 않았습니다.</div>
+
+<!-- 상황별 시작하기 -->
+<div class="sec head-blue" id="start">
+  <div class="sec-head">
+    <span class="sec-num">✦</span>
+    <div><div class="sec-title">어디서부터 시작할까요?</div>
+    <div class="sec-sub">지금 상황에 맞는 곳에서 시작하세요 — 상속세의 전체 흐름은 아래 본문에서 이어집니다</div></div>
+  </div>
+  <div class="sec-body">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;">
+
+      <div style="border:1.5px solid var(--b2);border-radius:10px;padding:16px;display:flex;flex-direction:column;">
+        <div style="font-size:12px;font-weight:700;color:var(--b1);letter-spacing:1px;">STEP 1 · 상속 개시 전</div>
+        <div style="font-size:16px;font-weight:700;margin:6px 0 8px;">미리 준비하는 중이라면</div>
+        <p style="font-size:13.5px;line-height:1.65;flex:1;margin:0 0 12px;">상속재산·간주재산·사전증여·채무를 <strong>워크북으로 하나씩 정리</strong>하면 예상 상속세가 보입니다. 개시 전에 정리해두면 절세 선택지가 가장 많습니다.</p>
+        <a href="https://taxmancall.com/pre-inheritance-tax/" style="display:block;text-align:center;background:var(--b1);color:#fff;text-decoration:none;padding:10px;border-radius:8px;font-size:13px;font-weight:700;">상속재산 사전 정리 워크북 →</a>
+      </div>
+
+      <div style="border:1.5px solid var(--b2);border-radius:10px;padding:16px;display:flex;flex-direction:column;">
+        <div style="font-size:12px;font-weight:700;color:var(--b1);letter-spacing:1px;">STEP 2 · 상속 개시 후</div>
+        <div style="font-size:16px;font-weight:700;margin:6px 0 8px;">상속이 개시되었다면</div>
+        <p style="font-size:13.5px;line-height:1.65;flex:1;margin:0 0 12px;">신고기한은 <strong>사망일이 속한 달 말일부터 6개월</strong>입니다. 준비서류를 자가진단으로 체크해 정리하고, 신고·납부 절차는 <a href="#s11" style="color:var(--b1);font-weight:700;">11번 항목</a>에서 확인하세요.</p>
+        <a href="https://taxmancall.com/inheritance-tax-checklist/" style="display:block;text-align:center;background:var(--b1);color:#fff;text-decoration:none;padding:10px;border-radius:8px;font-size:13px;font-weight:700;">준비서류 자가진단 →</a>
+      </div>
+
+      <div style="border:1.5px solid var(--b2);border-radius:10px;padding:16px;display:flex;flex-direction:column;">
+        <div style="font-size:12px;font-weight:700;color:var(--b1);letter-spacing:1px;">특수 쟁점 · 상속주택</div>
+        <div style="font-size:16px;font-weight:700;margin:6px 0 8px;">주택을 상속받는다면</div>
+        <p style="font-size:13.5px;line-height:1.65;flex:1;margin:0 0 12px;">공동상속주택은 <strong>누구 주택으로 보는지(간주소유자)</strong>에 따라 양도세·취득세·종부세 주택 수가 달라집니다. 기초자료만 넣으면 세목별로 자동 판정됩니다.</p>
+        <a href="https://taxmancall.com/inheritance-house/" style="display:block;text-align:center;background:var(--b1);color:#fff;text-decoration:none;padding:10px;border-radius:8px;font-size:13px;font-weight:700;">공동상속주택 판정기 →</a>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 <!-- 01 상속세란? -->
 <div class="sec" id="s01">
@@ -266,6 +315,16 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
       <div class="flow-box result">납부세액<span class="flow-sub">신고공제 3%↓</span></div>
     </div>
     <div class="info-box">신고기한 내에 신고하면 산출세액의 <strong>3%를 세액공제</strong>받습니다. 신고하지 않으면 가산세 20%(부정 무신고 40%)가 추가됩니다.</div>
+
+    <div class="sub-title">사망 외에도 — 상속이 개시되는 경우</div>
+    <p style="margin:6px 0 10px;">상속은 자연사망뿐 아니라 법이 <strong>사망으로 간주·추정하는 경우</strong>에도 개시됩니다.</p>
+    <div class="table-overflow"><table>
+      <tr><th style="width:20%">구분</th><th>내용</th></tr>
+      <tr><td class="td-label">인정사망</td><td>수난·화재·재난 등으로 시신을 찾지 못했지만 사망이 확실한 경우, 조사한 관공서의 통보로 가족관계등록부에 사망이 기재됩니다(가족관계등록법 §87). 기재된 사망일에 상속이 개시됩니다.</td></tr>
+      <tr><td class="td-label">실종선고</td><td>생사가 <strong>5년</strong>(전쟁·선박침몰·항공기추락 등 위난은 <strong>1년</strong>)간 불분명하면 이해관계인 청구로 가정법원이 실종선고를 하고, <strong>실종기간이 만료된 때 사망한 것으로 간주</strong>됩니다(민법 §27·§28).<br><br><strong>날짜가 둘로 갈립니다</strong> — 민법상 사망 시점(상속 자체·등기원인일)은 실종기간 만료일이지만, <strong>상속세 신고기한과 재산 평가 기준일은 '실종선고일'</strong>입니다(신고기한: 실종선고일이 속한 달 말일부터 6개월). 선고까지 통상 1년 안팎이 걸려 두 날짜가 몇 년씩 벌어질 수 있고, 오래된 실종은 어느 시점의 상속법이 적용되는지에 따라 상속인 범위·지분까지 달라지므로 반드시 전문 검토가 필요합니다.</td></tr>
+      <tr><td class="td-label">부재선고</td><td>군사분계선 이북 미수복지역 잔류자에 대해 「부재선고 등에 관한 특별조치법」에 따라 부재선고가 확정되면 <strong>상속·혼인에 관하여 사망으로 간주</strong>되어 상속이 개시됩니다.</td></tr>
+    </table></div>
+    <div class="warn-box">혼동 주의 — <strong>부재자 재산관리(민법 §22~§26)는 상속이 아닙니다.</strong> 생사불명이어도 사망 간주 전이라 가정법원이 재산관리인을 선임해 재산을 보존할 뿐이며, 상속으로 정리하려면 실종선고까지 받아야 합니다. 상속인 중에 생사불명인 분이 있어 분할협의가 막힌 경우에도 그 상속인에 대한 부재자 재산관리인 선임 또는 실종선고가 필요합니다.</div>
   </div>
 </div>
 
@@ -288,6 +347,39 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
     </table></div>
     <div class="info-box">법정상속분: 같은 순위 상속인은 균등 분할하되, <strong>배우자는 5할(50%) 가산</strong>합니다. 예) 배우자 + 자녀 2명 → 배우자 1.5 : 자녀 1 : 자녀 1 (배우자 3/7, 자녀 각 2/7)</div>
 
+    <div class="sub-title">법정상속분이 조정되는 두 가지 — 특별수익과 기여분</div>
+    <p style="margin:6px 0 10px;">법정상속분은 출발점일 뿐, 민법은 실제 사정에 맞게 상속분을 조정하는 장치를 두고 있습니다.</p>
+    <div class="table-overflow"><table>
+      <tr><th style="width:20%">구분</th><th>내용</th></tr>
+      <tr><td class="td-label">특별수익<br>(민법 §1008)</td><td>공동상속인 중 피상속인에게서 <strong>생전 증여나 유증을 받은 사람</strong>은 그만큼 미리 받은 것으로 보고 상속분에서 공제합니다. 세법의 사전증여 합산(10년)과 달리 <strong>기간 제한이 없어</strong> 수십 년 전 증여도 산입됩니다. 다만 2026.3. 개정으로 <strong>동거·간호 등 부양에 대한 보상으로 한 증여는 특별수익에서 제외</strong>됩니다(§1008 단서) — 부모를 모신 자녀에게 미리 준 재산을 지켜주는 조항입니다.</td></tr>
+      <tr><td class="td-label">기여분<br>(민법 §1008의2)</td><td>상당한 기간 <strong>동거·간호 등으로 피상속인을 특별히 부양</strong>했거나 <strong>재산의 유지·증가에 특별히 기여</strong>한 공동상속인은 법정상속분에 더해 기여분을 인정받을 수 있습니다. 핵심은 '특별히' — 통상의 부양의무 수준으로는 부족하고, 특히 배우자의 간병은 부부간 부양의무로 보는 경향이 강합니다(대법원 2014스44·45 전원합의체). 직장을 그만두고 전담 간병했거나 요양비·병원비를 홀로 부담한 것처럼 <strong>통상 수준을 넘는 사정</strong>이 입증되어야 합니다.</td></tr>
+    </table></div>
+
+    <div class="sub-title" style="font-size:14px;">기여분, 어떻게 인정받나</div>
+    <div class="table-overflow"><table>
+      <tr><th style="width:22%">단계</th><th>내용</th></tr>
+      <tr><td class="td-label">① 협의가 원칙</td><td>공동상속인 <strong>전원의 협의</strong>로 기여분을 정합니다. 협의분할서에 기여분을 반영해 지분을 정하면 되고, 최초 협의분할은 지분을 어떻게 정하든 <strong>상속인 간 증여세 문제가 없습니다.</strong></td></tr>
+      <tr><td class="td-label">② 안 되면 가정법원 심판</td><td>협의 불성립 시 심판으로 갑니다. 단, <strong>기여분 청구는 단독으로 할 수 없고 상속재산분할심판 청구가 있는 경우에만 가능</strong>합니다(§1008의2④) — 분할심판과 병합하는 구조입니다.</td></tr>
+      <tr><td class="td-label">누가 청구하나</td><td><strong>기여한 공동상속인 본인</strong>이 청구합니다. 나머지 공동상속인 전원을 상대방으로 하며, 상속재산분할심판을 함께 청구하거나 이미 진행 중인 분할심판 절차에서 청구합니다.</td></tr>
+      <tr><td class="td-label">어디에 청구하나</td><td>마류 가사비송사건이라 <strong>상대방(다른 공동상속인)의 주소지를 관할하는 가정법원</strong>입니다(가사소송법 §46). 상대방이 여러 명이면 그중 1명의 주소지 법원을 선택할 수 있고, 분할심판이 이미 계속 중이면 그 법원에 청구합니다. 마류 사건은 <strong>조정 전치</strong>라 심판 전에 조정 절차를 먼저 거치며, 대법원 전자소송(ecfs.scourt.go.kr)으로도 접수할 수 있습니다.</td></tr>
+      <tr><td class="td-label">언제까지 해야 하나</td><td>기여분 자체에 별도의 소멸시효는 없지만 사실상의 기한이 둘 있습니다. ① <strong>상속재산분할이 완료되기 전</strong> — 협의분할서에 전원이 날인해 분할이 끝나면 더 이상 기여분을 주장할 수 없으므로, <strong>협의서에 도장 찍기 전에</strong> 반영을 요구해야 합니다. ② 분할심판으로 간 경우, 가정법원이 <strong>기여분 청구 기간을 정해 고지</strong>할 수 있고 그 기간을 넘긴 청구는 <strong>각하될 수 있습니다</strong>(가사소송규칙 §113) — 분할심판이 시작되면 기여분 청구를 미루지 말아야 하는 이유입니다.</td></tr>
+      <tr><td class="td-label">한도</td><td>기여분은 상속개시 당시 재산가액에서 <strong>유증 가액을 공제한 금액을 넘지 못합니다</strong>(§1008의2③) — 유언(유증)이 기여분에 우선합니다.</td></tr>
+      <tr><td class="td-label">입증 자료</td><td>간병 일지·진료기록·보호자 상주 기록, 병원비·간병비·요양원비 <strong>이체내역(누가 부담했는지)</strong>, 동거 사실(주민등록·실거주 증빙), 퇴사 등 소득 포기 증빙, 다른 상속인들의 확인서. <strong>간병 중이라면 지금부터 기록과 이체내역을 남겨두는 것</strong>이 결정적입니다.</td></tr>
+    </table></div>
+    <div class="tip-box">세무 관점 — 기여분으로 몫이 달라져도 상속세 <strong>총액은 동일</strong>하고(유산세 방식) 각자의 납부 비율만 바뀝니다. 배우자가 기여분으로 실제 상속분을 늘리면 법정상속분 한도 내에서 <strong>배우자공제를 더 채울 수 있어</strong> 절세와도 연결됩니다. 기여분을 반영한 분할안은 협의 확정 전에 세액 시뮬레이션을 함께 돌려보세요.</div>
+
+    <div class="sub-title">상속인은 무엇으로 확정하나 — 가족관계등록부 5종 증명서</div>
+    <p style="margin:6px 0 10px;">상속인 확정의 기본 세트는 <strong>피상속인 기준으로 발급한 5종 증명서</strong>입니다. 반드시 <strong>'상세'</strong>로 발급해야 합니다 — 일반증명서에는 사망한 자녀, 이혼한 배우자 등 과거 이력이 빠져 상속인·대습상속인을 놓칠 수 있습니다. 상속등기 시 등기소가 요구하는 표준 서류도 이 5종(상세) + 제적등본입니다.</p>
+    <div class="table-overflow"><table>
+      <tr><th style="width:26%">증명서 (상세)</th><th>이 서류로 확인하는 것</th></tr>
+      <tr><td class="td-label">가족관계증명서</td><td>피상속인의 부모·배우자·자녀 — 1·2순위 상속인의 뼈대. 단, <strong>본인 기준 3대만 나오고 형제자매는 나오지 않습니다.</strong></td></tr>
+      <tr><td class="td-label">기본증명서</td><td>사망일(상속개시일), 개명 이력, <strong>실종선고·부재선고 기재</strong> 확인</td></tr>
+      <tr><td class="td-label">혼인관계증명서</td><td>혼인·이혼 이력 — <strong>전혼(前婚)에서 낳은 자녀의 존재 가능성</strong>을 잡아내는 서류. 재혼 가정에서 특히 중요합니다.</td></tr>
+      <tr><td class="td-label">입양관계증명서</td><td>일반양자 관계 — 일반입양 양자는 <strong>친생부모와 양부모 양쪽에서 상속</strong>받으므로 양쪽 관계도가 모두 필요합니다.</td></tr>
+      <tr><td class="td-label">친양자입양관계증명서</td><td>친양자는 친생관계가 단절되어 <strong>친생부모의 상속을 받지 못합니다.</strong> 민감정보라 발급이 제한되며, 상속 처리 등 정당한 이해관계를 소명해야 발급됩니다.</td></tr>
+    </table></div>
+    <div class="warn-box"><strong>5종만으로 안 되는 경우</strong> — ① 가족관계등록부는 2008년 시행이라 그 이전 이력(2007년 이전 사망, 옛 혼인·입양, 혼외자)은 <strong>제적등본</strong>으로 거슬러 확인해야 합니다. ② 형제자매 상속(3순위)은 가족관계증명서에 형제자매가 나오지 않으므로 <strong>피상속인 부모의 가족관계증명서</strong> 또는 제적등본으로 재구성합니다. ③ 대습상속은 <strong>먼저 사망한 자녀의 가족관계증명서</strong>를 별도로 발급받아야 대습자가 확인됩니다. ④ 서류에 아예 나오지 않는 것도 있습니다 — 사실혼 배우자(상속권 없음), 상속결격(민법 §1004), 그리고 사망을 안 날부터 2년 내 가능한 <strong>사후 인지청구</strong>(민법 §864)로 혼외자가 나중에 상속인으로 추가될 수 있는 잔여 리스크까지 감안해야 합니다.</div>
+
     <div class="sub-title">대습상속 (민법 §1001, §1010)</div>
     <div class="card2">
       <div class="card2-item b">
@@ -302,10 +394,116 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
       </div>
     </div>
     <div class="tip-box">예시: 피상속인에게 자녀 A(생존), B(피상속인보다 먼저 사망, 배우자와 자녀 2명 있음)가 있는 경우 → B의 배우자와 자녀 2명이 B의 상속분을 대습상속받습니다. 이때 B의 배우자도 5할 가산이 적용됩니다.</div>
+
+    <div class="sub-title">동시사망 추정 (민법 §30) — 누가 먼저 사망했는지에 따라 모든 것이 달라집니다</div>
+    <p style="margin:6px 0 10px;">2인 이상이 <strong>동일한 위난</strong>(교통사고·화재·항공기 추락 등)으로 사망하여 선후를 알 수 없으면 <strong>동시에 사망한 것으로 추정</strong>합니다. '추정'이므로 사망진단서·검안서 등으로 사망 시각의 선후가 입증되면 뒤집힙니다.</p>
+    <div class="table-overflow"><table>
+      <tr><th style="width:24%">효과</th><th>내용</th></tr>
+      <tr><td class="td-label">상호 상속 없음</td><td>동시에 사망한 사람들 <strong>사이에는 상속이 일어나지 않습니다</strong> — 상속받으려면 상속개시 시점에 생존해 있어야 하기 때문입니다.</td></tr>
+      <tr><td class="td-label">대습상속은 인정</td><td>피상속인과 자녀가 동시사망한 경우, 그 자녀의 배우자·자녀는 <strong>대습상속을 받을 수 있습니다</strong>(대법원 2001.3.9. 선고 99다13157 — 민법 §1001의 '상속개시 전 사망'에 동시사망 포함).</td></tr>
+    </table></div>
+
+    <div class="sub-title" style="font-size:14px;">사례 — 부부가 사고로 함께 사망 (자녀 없음)</div>
+    <div class="card2">
+      <div class="card2-item g">
+        <div class="card2-title">남편이 먼저 사망한 것으로 입증되면</div>
+        <p>남편 재산 → 아내가 시부모와 공동상속 (<strong>배우자공제 적용</strong>) → 직후 아내 사망으로 아내 몫 전부가 <strong>친정 부모에게</strong> 상속. 짧은 간격의 두 번째 상속에는 <strong>단기재상속 세액공제</strong>(상증법 §30, 10년 내 재상속 시 1년 이내 100%~10년 이내 10%)가 적용되어 이중과세가 조정됩니다.</p>
+      </div>
+      <div class="card2-item r">
+        <div class="card2-title">동시사망으로 추정되면</div>
+        <p>부부 사이에 상속이 없으므로 남편 재산은 <strong>남편 부모에게</strong>, 아내 재산은 <strong>아내 부모에게</strong> 각각 별도 상속. 배우자 상속 자체가 없어 <strong>배우자공제(최소 5억)를 쓸 수 없고</strong>, 재상속이 아니므로 단기재상속공제도 없습니다.</p>
+      </div>
+    </div>
+    <div class="tip-box">사망 선후에 따라 <strong>재산이 어느 집안으로 가는지</strong>와 <strong>배우자공제·단기재상속공제 적용 여부</strong>가 통째로 갈립니다. 동일 사고 사망 사건에서는 사망진단서·시체검안서의 <strong>사망 시각 기재를 반드시 확인</strong>하고, 시각이 다르게 기재되어 있으면 추정과 다른 상속 구도로 신고해야 합니다. 병원 도착 후 사망 등으로 선후가 입증되는 경우가 실제로 적지 않습니다.</div>
+
+    <div class="sub-title">미성년 상속인이 있다면 — 특별대리인 선임 (민법 §921)</div>
+    <div class="danger-box"><strong>왜 필요한가</strong> — 미성년자는 스스로 협의할 수 없어 친권자(부모)가 대리하는데, 그 친권자도 공동상속인이면 <strong>한쪽 몫이 커질수록 미성년 자녀 몫이 줄어드는 이해상반행위</strong>가 됩니다. 이 경우 친권자가 자녀를 대리해 작성한 분할협의는 <strong>무효</strong>입니다. 부모 중 한 분이 돌아가시고 남은 배우자와 미성년 자녀가 함께 상속받는, 가장 흔한 상속 구조가 바로 이 경우에 해당합니다.</div>
+    <div class="table-overflow"><table>
+      <tr><th style="width:20%">구분</th><th>내용</th></tr>
+      <tr><td class="td-label">사건의 성격</td><td>가사소송법상 <strong>라류 가사비송사건</strong>입니다. 재판 출석 없이 서면 심리로 진행되는 것이 보통입니다.</td></tr>
+      <tr><td class="td-label">관할 법원</td><td><strong>미성년자(사건본인)의 주소지를 관할하는 가정법원</strong>(가사소송법 §44). 가정법원이 설치되지 않은 지역은 관할 지방법원·지원의 가사 재판부에 청구합니다. 자녀가 여러 명이어도 주소가 같으면 한 법원에 함께 청구합니다.</td></tr>
+      <tr><td class="td-label">신청 방법</td><td>세 가지 모두 가능합니다. ① <strong>방문 접수</strong> — 관할 가정법원 종합민원실, ② <strong>우편 접수</strong>, ③ <strong>전자소송</strong> — 대법원 전자소송 포털(ecfs.scourt.go.kr)에서 [서류제출 → 가사 → 가사비송] 메뉴로 온라인 접수. 전자소송은 공동인증서 등 본인인증이 필요하며, 진행상황 조회와 보정서 제출도 온라인으로 할 수 있어 편리합니다.</td></tr>
+      <tr><td class="td-label">청구서 양식</td><td>법원 전자민원센터의 <strong>'특별대리인선임 심판청구서(이해상반)'</strong> 양식을 사용합니다. 청구인은 친권자, 사건본인은 미성년 자녀이며, 청구취지에 자녀별로 특별대리인이 될 사람을 특정하고 <strong>상속재산분할협의서(안)을 별지로 첨부</strong>합니다.</td></tr>
+      <tr><td class="td-label">특별대리인은 누구로</td><td>미성년자와 이해관계가 없는 친족을 후보로 세웁니다. 실무상 <strong>사망한 피상속인 쪽 혈족</strong>(부친 사망 시 친조부모·백부·고모 등)을 원칙으로 봅니다 — 생존 친권자의 영향에서 독립적으로 자녀 입장을 대변할 수 있는 사람이기 때문입니다. 자녀가 여러 명이면 자녀들 사이에도 이해가 상반되므로 <strong>자녀 1명당 서로 다른 특별대리인 1명씩</strong> 세웁니다(민법 §921②).</td></tr>
+      <tr><td class="td-label">법원의 심사</td><td>법원은 첨부된 협의서(안)이 <strong>미성년자에게 불리하지 않은지</strong>를 심사합니다. 미성년자 몫이 법정상속분에 크게 못 미치는 안은 보정명령이나 기각 가능성이 있습니다. 다만 미성년자 몫을 줄이는 데 합리적 사유(예: 배우자공제 활용 후 2차 상속 계획)가 있으면 소명자료로 설명할 수 있습니다.</td></tr>
+      <tr><td class="td-label">비용·기간</td><td>인지액 <strong>사건본인 1명당 5,000원</strong> + 송달료(접수 시 법원 고지 금액, 수만 원 수준). 심리는 통상 <strong>수 주</strong> 소요되며 법원·기록 보정 여부에 따라 달라집니다.</td></tr>
+      <tr><td class="td-label">선임 이후</td><td>심판서(결정문)를 받으면, 특별대리인이 미성년자를 대리해 협의서의 해당 자녀 서명란에 <strong>본인(특별대리인) 인감을 날인</strong>하고 인감증명서를 첨부합니다. 상속등기·금융기관·상속세 신고 제출 시 <strong>선임 심판서를 함께 제출</strong>합니다.</td></tr>
+    </table></div>
+
+    <div class="sub-title" style="font-size:14px;">청구 시 첨부서류 체크리스트</div>
+    <div class="check-grid">
+      <div class="check-item"><span class="check-box"></span>특별대리인선임 심판청구서 (이해상반용)</div>
+      <div class="check-item"><span class="check-box"></span>상속재산분할협의서(안) <span class="check-note">(별지 첨부, 필수)</span></div>
+      <div class="check-item"><span class="check-box"></span>미성년자: 기본증명서·가족관계증명서(상세)</div>
+      <div class="check-item"><span class="check-box"></span>미성년자·청구인 주민등록등본</div>
+      <div class="check-item"><span class="check-box"></span>피상속인: 기본증명서(사망 기재)·가족관계증명서</div>
+      <div class="check-item"><span class="check-box"></span>특별대리인 후보자: 주민등록초본·가족관계증명서 <span class="check-note">(미성년자와의 관계 소명)</span></div>
+      <div class="check-item"><span class="check-box"></span>특별대리인 후보자 취임 동의서(수락서) <span class="check-note">(법원에 따라 인감증명서 요구)</span></div>
+      <div class="check-item"><span class="check-box"></span>상속재산 소명자료 <span class="check-note">(등기부등본·잔액증명서 등 재산목록)</span></div>
+    </div>
+    <div class="info-box">첨부서류의 구체적 범위는 법원마다 보정 관행이 조금씩 다릅니다. 접수 후 보정명령이 오면 그 내용대로 보완하면 되고, 전자소송으로 접수했다면 보정서도 온라인으로 제출할 수 있습니다.</div>
+
+    <div class="warn-box">상속세 신고기한(6개월)과 배우자상속재산분할기한(신고기한 다음날부터 9개월) 안에 <strong>선임 → 협의서 날인 → 등기</strong>까지 마쳐야 하므로, 분할협의안이 잡히는 즉시 청구부터 진행해야 합니다. 미성년자만 상속포기하고 친권자가 상속받는 구조 역시 이해상반이라 특별대리인이 필요합니다.</div>
   </div>
 </div>
 
 <!-- 03 거주자 vs 비거주자 -->
+<!-- 유증·사인증여 -->
+<div class="sec head-blue" id="bequest">
+  <div class="sec-head">
+    <span class="sec-num">유언</span>
+    <div><div class="sec-title">유증·사인증여 — 유언으로 재산을 남기면 세금은 어떻게 되나</div>
+    <div class="sec-sub">받는 사람이 상속인이 아니어도 증여세가 아니라 상속세입니다 — 다만 공제·할증·취득세가 달라집니다</div></div>
+  </div>
+  <div class="sec-body">
+    <div class="info-box">상속세법상 '상속'에는 민법상 상속뿐 아니라 <strong>유증, 사인증여, 유언대용신탁·수익자연속신탁</strong>으로 재산이 이전되는 경우가 모두 포함됩니다(상증법 §2). 즉 유언이나 사인증여로 받은 재산은 <strong>증여세가 아니라 상속세</strong>로 과세되고, 받은 사람(수유자)도 받은 재산 비율만큼 상속세 납부의무를 집니다.</div>
+
+    <div class="sub-title">유증 vs 사인증여 — 무엇이 다른가</div>
+    <div class="table-overflow"><table>
+      <tr><th style="width:20%">구분</th><th>유증</th><th>사인증여</th></tr>
+      <tr><td class="td-label">성격</td><td>유언에 의한 <strong>단독행위</strong> — 받는 사람의 동의 없이 성립</td><td>생전에 맺는 <strong>증여계약</strong> — 사망 시 효력 발생, 받는 사람의 승낙 필요</td></tr>
+      <tr><td class="td-label">형식 요건</td><td>민법이 정한 5가지 유언 방식(자필증서·공정증서 등)을 지키지 않으면 <strong>전부 무효</strong></td><td>유언 방식 불요 — 계약이므로 형식 자유. 다만 분쟁 대비 <strong>서면(공증) 필수적 권장</strong></td></tr>
+      <tr><td class="td-label">받는 사람의 포기</td><td>특정유증은 언제든 포기 가능, 포괄유증은 3개월 내 가정법원 신고</td><td>계약이므로 일방적 포기 불가(합의 해제 등 별도 문제)</td></tr>
+      <tr><td class="td-label">상속세</td><td colspan="2" class="center bold">동일 — 모두 상속세 과세대상 (상속개시일 기준 평가·합산)</td></tr>
+    </table></div>
+
+    <div class="sub-title">세무상 달라지는 세 가지</div>
+    <div class="table-overflow"><table>
+      <tr><th style="width:24%">쟁점</th><th>내용</th></tr>
+      <tr><td class="td-label">① 상속공제 종합한도</td><td><strong>상속인이 아닌 자</strong>에게 유증·사인증여한 재산은 상속공제 종합한도에서 차감됩니다(§24). 유산의 상당 부분을 상속인 외의 사람(손자녀·며느리·사위·제3자)에게 남기면 일괄공제·배우자공제 등을 <strong>그만큼 쓰지 못해 세부담이 커질 수 있습니다.</strong></td></tr>
+      <tr><td class="td-label">② 세대생략 할증</td><td>자녀가 생존해 있는데 <strong>손자녀에게 직접</strong> 유증·사인증여하면 산출세액의 <strong>30% 할증</strong>(미성년 손자녀가 20억 초과 취득 시 40%)이 붙습니다(§27). 자녀가 먼저 사망해 대습상속이 되는 경우는 할증이 없습니다.</td></tr>
+      <tr><td class="td-label">③ 취득세가 갈립니다</td><td>부동산 기준으로 — <strong>상속인에 대한 유증(특정·포괄 불문)과 상속인 아닌 자에 대한 포괄유증</strong>은 지방세법상 '상속'에 포함되어 상속 취득세율(농지 외 3.16%)과 시가표준액 과세표준이 적용됩니다(지방세법 §7). 반면 <strong>상속인 아닌 자에 대한 특정유증과 사인증여</strong>는 무상취득(증여)으로 보아 <strong>3.5%(합계 4.0%)</strong> 세율에, 과세표준도 <strong>시가인정액</strong>(매매사례가·감정가 등) 기준이라 부담이 크게 늘 수 있습니다.</td></tr>
+    </table></div>
+    <div class="tip-box">설계 포인트: 손자녀·제3자에게 부동산을 남길 계획이라면 <strong>특정유증이냐 포괄유증이냐, 유증이냐 사인증여냐에 따라 취득세가 달라지므로</strong> 유언장 문구 단계부터 검토가 필요합니다. 포괄유증 여부는 문구만이 아니라 유언자의 의사와 재산 전체를 놓고 판단되므로(대법원 78다1816), 의도한 세율이 적용되도록 명확하게 작성해야 합니다.</div>
+
+    <div class="sub-title">유언대용신탁 — 유언의 빈틈을 메우는 세 번째 수단 (신탁법 §59)</div>
+    <p style="margin:6px 0 10px;">생전에 은행·신탁회사(수탁자)와 <strong>신탁계약</strong>을 맺어 재산을 맡기고, 살아 있는 동안은 본인이 수익자로서 재산을 그대로 쓰다가, <strong>사망하면 미리 지정해 둔 사후수익자(배우자·자녀 등)에게 자동으로 귀속</strong>되게 하는 제도입니다. 이름 그대로 유언을 '대신'하는 계약이며, 본인 생전에는 언제든 내용 변경·해지가 가능합니다.</p>
+    <div class="table-overflow"><table>
+      <tr><th style="width:26%">비교</th><th>유언 (공정증서 기준)</th><th>유언대용신탁</th></tr>
+      <tr><td class="td-label">무효 위험</td><td>방식 요건 미비 시 전부 무효 (공정증서는 낮음)</td><td>계약이므로 방식 무효 위험 없음</td></tr>
+      <tr><td class="td-label">사망 후 집행</td><td>유언집행자가 등기·인출 절차 진행 — 상속인 협조·시간 필요</td><td><strong>수탁자가 계약대로 즉시 집행</strong> — 상속인 간 분쟁·공백 최소화</td></tr>
+      <tr><td class="td-label">2단계 승계 설계</td><td>불가 — "배우자 사망 후엔 자녀에게"를 유언으로 정할 수 없음</td><td><strong>수익자연속신탁(신탁법 §60)으로 가능</strong> — "생존 배우자 → 배우자 사망 시 자녀" 순차 지정</td></tr>
+      <tr><td class="td-label">생전 관리 기능</td><td>없음 — 유언은 사망 시에만 효력</td><td>치매 등 판단능력 저하에 대비해 <strong>생전 재산관리·지급 설계</strong> 가능 (성년후견의 대안)</td></tr>
+      <tr><td class="td-label">분할 지급 설계</td><td>불가 — 일시 이전</td><td>미성년·장애 자녀에게 <strong>매월 생활비형 분할지급</strong> 등 설계 가능</td></tr>
+      <tr><td class="td-label">비용</td><td>공증 수수료 (1회)</td><td>신탁보수(설정·연간) 계속 발생, 부동산은 신탁등기 필요</td></tr>
+    </table></div>
+    <div class="danger-box"><strong>세금은 아낄 수 없습니다</strong> — 사후수익자가 취득하는 신탁 수익권은 <strong>상속세 과세대상</strong>입니다(상증법 §2·§9). 유언대용신탁은 절세 수단이 아니라 <strong>집행·설계 수단</strong>입니다. 생전 설정 시점에는 본인이 수익자(자익신탁)이므로 증여세 문제도 없습니다.</div>
+    <div class="tip-box">취득세는 계약서 문언이 가릅니다 — 대법원 2025.9.25. 선고 2025두33790은 사후수익자의 수익권이 <strong>부동산 소유권이전등기청구권</strong>이면 부동산 취득으로 취득세 과세, <strong>처분대금 지급청구권(금전채권)</strong>에 불과하면 취득세 과세가 위법이라고 판단했습니다. 신탁계약서의 수익권 설계 단계에서 세무 검토가 필요한 이유입니다. 또한 유언대용신탁을 <strong>유류분 회피 수단으로 설계해서는 안 됩니다</strong> — 신탁재산의 유류분 산정 포함 여부는 하급심 판단이 엇갈리고 대법원 판례가 확립되지 않았습니다.</div>
+
+    <div class="sub-title">상속인 입장에서 — 유언대로만 받아야 하나?</div>
+    <p style="margin:6px 0 10px;">피상속인이 유언·유증·신탁으로 재산을 정리해 두었더라도, 상속인이 무조건 그대로 받아야 하는 것은 아닙니다. 다만 <strong>수단에 따라 뒤집을 수 있는 강도가 완전히 다릅니다.</strong></p>
+    <div class="table-overflow"><table>
+      <tr><th style="width:22%">수단</th><th>상속인들이 바꿀 수 있나</th></tr>
+      <tr><td class="td-label">유증 (유언)</td><td><strong>전원 합의로 가능</strong> — 수유자가 유증을 포기하고(특정유증은 언제든 포기 가능, 민법 §1074) <strong>수유자를 포함한 상속인 전원</strong>이 합의하면 유언과 다르게 협의분할할 수 있습니다. 최초 협의분할은 지분을 어떻게 정하든 상속인 간 증여 문제가 없고, 등기 후 재분할도 <strong>상속세 신고기한(6개월) 이내면 증여로 보지 않습니다</strong>(상증법 §4③). 기한이 지난 재분할은 초과취득분에 증여세가 과세되므로, 바꾸려면 기한 내에 끝내야 합니다.</td></tr>
+      <tr><td class="td-label">합의가 안 되면<br>— 유류분</td><td>전원 합의가 안 될 때는 <strong>유류분반환청구</strong>가 남습니다(직계비속·배우자는 법정상속분의 1/2, 직계존속 1/3). 안 날부터 <strong>1년</strong>, 상속개시부터 10년 내 행사해야 하며, 2026.3. 개정으로 가액(금전) 반환이 원칙입니다. 반환받는 재산은 증여가 아니라 상속세 틀 안에서 세액이 재계산됩니다.</td></tr>
+      <tr><td class="td-label">유언대용신탁</td><td><strong>상속인 합의로 뒤집을 수 없습니다</strong> — 유언이 아니라 피상속인이 생전에 수탁자와 맺은 계약이라, 사망 즉시 수탁자가 계약대로 사후수익자에게 집행합니다. 사후수익자가 받은 재산을 다른 상속인에게 나눠주면 상속재산 분할이 아닌 <strong>별도의 증여로 증여세가 새로 과세</strong>됩니다. 유류분청구도 신탁재산의 포함 여부에 대한 대법원 판례가 확립되지 않아 다툼 자체가 불확실합니다.</td></tr>
+    </table></div>
+    <div class="tip-box">정리하면 — 피상속인 입장에서 정리한 내용을 <strong>확실히 지키고 싶다면 유언대용신탁</strong>이 가장 견고하고, 유언(유증)은 상속인 전원이 합의하면 신고기한 내에서 세부담 없이 다시 짤 수 있는 여지가 남습니다. 어느 쪽이든 분할을 다시 짤 때는 배우자공제·취득세 특례·2차 상속까지 함께 계산해야 하므로 협의 확정 전에 시뮬레이션이 필요합니다.</div>
+
+    <div class="warn-box">유언으로 특정인에게 몰아주더라도 다른 상속인의 <strong>유류분</strong>(직계비속·배우자는 법정상속분의 1/2)은 남습니다. 자필증서 유언의 무효 사유, 유언 5가지 방식, 2026.3. 시행 개정 유류분 제도(형제자매 유류분 폐지 등)는 <a href="https://taxmancall.com/pre-inheritance-tax/#s5" style="color:var(--r1);font-weight:700;">사전 정리 워크북 5장</a>에서 자세히 다룹니다. 자필증서·녹음·비밀·구수증서 유언은 사후 <strong>가정법원 검인</strong> 절차가 필요하고, 공정증서 유언은 검인 없이 바로 집행할 수 있습니다.</div>
+  </div>
+</div>
+
 <div class="sec head-blue" id="s03">
   <div class="sec-head">
     <span class="sec-num">03</span>
@@ -373,6 +571,7 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
       → 사망 전 1~2년간의 통장 거래내역을 전부 확보해 인출 사유를 정리해두는 것이 핵심입니다.
     </div>
     <div class="tip-box">재산 종류는 ① 현금·예금·유가증권, ② 부동산 및 부동산에 관한 권리, ③ 그 외 기타재산으로 구분하여 각각 별도로 판단합니다.</div>
+    <div class="tip-box">상속 개시 전이라면 <a href="https://taxmancall.com/pre-inheritance-tax/" style="color:var(--b1);font-weight:700;">상속재산 사전 정리 워크북</a>으로 본래·간주·추정재산과 사전증여, 채무까지 미리 정리해두세요. 예상 상속세 파악과 절세 검토가 훨씬 빨라집니다.</div>
   </div>
 </div>
 
@@ -513,7 +712,7 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
       </table></div>
       <div class="calc-foot"><span class="calc-foot-label">납부세액</span><span class="calc-foot-val">171,690,000원</span></div>
     </div>
-    <div class="tip-box">배우자공제와 금융재산공제를 충분히 활용하면 과세표준이 크게 줄어듭니다. 배우자가 법정상속분(이 예시는 3/7)까지 실제로 상속받도록 분할협의서를 작성하는 것이 절세의 핵심입니다.</div>
+    <div class="tip-box">배우자공제와 금융재산공제를 충분히 활용하면 과세표준이 크게 줄어듭니다. 배우자가 법정상속분(이 예시는 3/7)까지 실제로 상속받도록 분할협의서를 작성하는 것이 절세의 핵심입니다. 협의서 양식은 <a href="forms/division-agreement.docx" download="상속재산분할협의서_양식.docx" style="color:var(--b1);font-weight:700;">여기서 내려받으실 수 있습니다</a>.</div>
   </div>
 </div>
 
@@ -606,6 +805,7 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
       · <strong>공동상속 시 지분이 가장 큰 상속인(주된 상속인) 기준으로 판단</strong> — 나머지 공동상속인도 동일하게 특례세율 적용
     </div>
     <div class="tip-box">절세 포인트: 공동상속 협의 시 무주택자인 상속인의 지분을 가장 크게 배분하면, 다른 공동상속인들도 함께 0.96% 특례세율을 적용받을 수 있습니다. 다만 상속주택으로 인해 <strong>2주택 이상</strong>이 되는 경우에는 특례가 적용되지 않습니다.</div>
+    <div class="info-box">상속주택의 간주소유자(주된 상속인)와 세목별 주택 수, 적용 취득세율은 상속인 구성·지분에 따라 달라집니다. <a href="https://taxmancall.com/inheritance-house/" style="color:var(--b1);font-weight:700;">공동상속주택 판정기</a>에 기초자료를 입력하면 자동으로 정리됩니다.</div>
 
     <div class="sub-title" style="color:var(--o1)">농지 자경 감면 (지특법, 한시 규정)</div>
     <div class="warn-box">상속받은 농지를 <strong>2년 이상 자경</strong>하는 경우 취득세의 50%가 감면되어 실효세율이 약 <strong>0.18%</strong>까지 낮아질 수 있습니다. 사후관리 대상이므로 자경 요건을 충족하지 못하면 감면세액이 추징됩니다. 일몰기한이 있는 한시 규정이므로 신고 시점의 적용 여부를 반드시 확인하세요.</div>
@@ -623,6 +823,103 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
   </div>
 </div>
 
+<!-- 신고 이후 소득세 -->
+<div class="sec head-blue" id="after">
+  <div class="sec-head">
+    <span class="sec-num">이후</span>
+    <div><div class="sec-title">상속세 신고가 끝난 뒤 — 상속인의 소득세가 시작됩니다</div>
+    <div class="sec-sub">상속받은 재산에서 나오는 소득은 이제 상속인의 것 — 종합소득세·양도소득세·건강보험까지 이어집니다</div></div>
+  </div>
+  <div class="sec-body">
+
+    <div class="sub-title">0. 그 전에 — 피상속인의 마지막 소득세 신고 (놓치기 가장 쉬운 것)</div>
+    <div class="danger-box">사망연도 1월 1일부터 사망일까지 피상속인에게 발생한 소득은 <strong>상속인이 피상속인을 대신해 종합소득세를 신고</strong>해야 합니다. 기한은 다음 해 5월이 아니라 <strong>상속개시일이 속하는 달의 말일부터 6개월</strong>(소득세법 §74) — 상속세 신고기한과 같으므로 반드시 함께 처리하세요. 피상속인이 사업자(임대업 포함)였다면 부가가치세 신고와 사업자등록 승계·정정도 따라옵니다.</div>
+
+    <div class="sub-title">상속받은 재산별 — 상속인에게 생기는 소득</div>
+    <div class="table-overflow"><table>
+      <tr><th style="width:22%">받은 재산</th><th style="width:24%">생기는 소득</th><th>챙길 포인트</th></tr>
+      <tr><td class="td-label">상가 (임대 중)</td><td>부동산임대 사업소득<br>→ <strong>종합과세</strong></td><td>상속인 명의 사업자등록(승계), 상가임대는 부가세 과세사업이라 <strong>부가세 신고 의무</strong>도 승계. 공동상속이면 지분별로 소득 귀속·공동사업 등록.</td></tr>
+      <tr><td class="td-label">주택 (임대 중)</td><td>주택임대소득<br>→ 종합과세 또는 분리과세</td><td><strong>주택 수가 늘어나는 효과</strong>에 주의 — 본인 1주택 + 상속주택 = 2주택이 되면 기존에 비과세이던 본인 주택 월세소득도 과세로 전환됩니다(월세 비과세는 1주택자만, 고가주택 제외). 3주택 이상이면 보증금 간주임대료까지. 연 2,000만원 이하는 14% 분리과세 선택 가능.</td></tr>
+      <tr><td class="td-label">예금</td><td>이자소득</td><td rowspan="2">이자+배당 합산 <strong>연 2,000만원 초과 시 금융소득종합과세</strong> — 상속으로 금융자산이 커지면 원천징수로 끝나던 분이 5월 종합소득세 신고 대상자로 바뀝니다.</td></tr>
+      <tr><td class="td-label">배당주</td><td>배당소득</td></tr>
+      <tr><td class="td-label">주식·부동산<br>추후 처분 시</td><td>양도소득<br>→ <strong>분류과세</strong> (종합소득 합산 아님)</td><td><strong>취득가액 = 상속세 신고 시 평가액</strong>입니다. 상속세를 아끼려 기준시가로 낮게 신고하면 나중에 양도차익이 커져 양도세로 되돌아옵니다 — 상속세와 양도세를 함께 놓고 평가 전략을 세워야 하는 이유. 상장주식은 소액주주 장내 양도 시 양도세 비과세이므로 보유 중 배당소득만 관리하면 됩니다.</td></tr>
+    </table></div>
+    <div class="tip-box">분할협의가 확정되기 전에 발생한 임대료·이자 등은 원칙적으로 <strong>법정상속분 비율로 각 상속인에게 귀속</strong>됩니다. 협의분할이 늦어질수록 소득 귀속 정리도 복잡해지니, 임대재산이 있다면 분할협의를 서두르는 것이 좋습니다.</div>
+
+    <div class="sub-title">처분할 때 — 상속재산 양도소득세에서 챙길 특례</div>
+    <div class="table-overflow"><table>
+      <tr><th style="width:26%">쟁점</th><th>내용</th></tr>
+      <tr><td class="td-label">취득시기·취득가액</td><td>취득시기는 <strong>상속개시일</strong>, 취득가액은 <strong>상속세 신고 시 평가액</strong>입니다. 증여와 달리 <strong>이월과세(10년)가 없어</strong> 상속 직후 양도해도 취득가액이 피상속인 취득가로 소급되지 않습니다 — 평가액을 시가에 가깝게 잡아둘수록 향후 양도차익이 줄어드는 이유입니다.</td></tr>
+      <tr><td class="td-label">보유기간이 둘로 갈립니다</td><td><strong>세율 적용</strong>(단기양도 중과 판정) 보유기간은 <strong>피상속인이 취득한 날부터</strong> 기산합니다(소득세법 §104) — 상속받자마자 팔아도 피상속인이 오래 보유했다면 단기양도 중과세율을 피합니다. 반면 <strong>장기보유특별공제</strong>는 <strong>상속개시일부터</strong> 기산합니다. 같은 물건인데 목적별로 기산일이 다르니 혼동하지 마세요.</td></tr>
+      <tr><td class="td-label">상속주택 비과세 특례</td><td>본인 일반주택 1채 + 상속주택 1채가 된 경우, <strong>일반주택을 양도할 때는 상속주택이 없는 것으로 보고</strong> 1세대 1주택 비과세를 판정합니다(소득세법 시행령 §155②). 피상속인이 2채 이상이었다면 선순위 상속주택 1채만 특례 대상이고, 상속개시 당시 이미 보유하던 일반주택이어야 합니다. 동일세대원(함께 살던 부모 등)에게서 상속받은 경우에는 비과세 판정 시 <strong>피상속인의 보유·거주기간을 통산</strong>합니다.</td></tr>
+      <tr><td class="td-label">농지 — 8년 자경 감면</td><td>피상속인이 8년 이상 자경한 농지는 상속인이 <strong>1년 이상 계속 경작하면 피상속인의 자경기간을 통산</strong>해 양도세 감면(조특법 §69)을 받을 수 있고, 상속인이 경작하지 않는 경우에는 <strong>상속개시일부터 3년 내 양도</strong>해야 통산이 인정됩니다(조특법 시행령 §66).</td></tr>
+      <tr><td class="td-label">연금계좌 (연금저축·IRP)</td><td>피상속인의 연금계좌는 <strong>배우자에 한해 승계</strong>해 연금 형태로 계속 수령할 수 있습니다(과세이연 유지). 승계하지 않고 해지·일시수령하면 세제혜택분에 기타소득세 등이 과세되므로, 배우자 상속 시 승계 여부를 반드시 검토하세요.</td></tr>
+    </table></div>
+    <div class="tip-box">상속세 평가 단계의 선택(기준시가 vs 감정평가)이 여기서 회수됩니다 — 상속세·양도세·비과세 특례를 <strong>한 장의 그림으로 놓고 처분 계획까지 세워야</strong> 전체 세부담이 최소화됩니다. 처분 예정이 있다면 상속세 신고 전에 말씀해 주세요.</div>
+
+    <div class="sub-title">세금 밖에서 — 건강보험료</div>
+    <div class="warn-box">상속으로 임대소득·금융소득이 생기면 직장가입자의 <strong>피부양자 자격이 탈락</strong>(연 소득 2,000만원 기준 등)해 지역가입자 보험료가 새로 부과되는 경우가 흔합니다. 소득뿐 아니라 상속받은 재산 자체도 지역가입자 보험료 산정에 반영되므로, 세금과 함께 건보료 영향까지 미리 계산해 두어야 실수령 기준의 판단이 가능합니다.</div>
+
+    <div class="info-box">정리 — 상속세 신고 완료 후 상속인의 캘린더: ① 부가세 신고(임대사업 승계 시, 과세기간별) → ② 다음 해 <strong>5월 종합소득세 신고</strong>(임대·이자·배당 합산) → ③ 처분 시 양도소득세 신고(양도일이 속한 달 말일부터 2개월). 저희 사무소는 상속세 신고 후에도 이 흐름을 이어서 관리합니다.</div>
+  </div>
+</div>
+
+<!-- 유족연금 -->
+<div class="sec head-purple" id="pension">
+  <div class="sec-head">
+    <span class="sec-num">연금</span>
+    <div><div class="sec-title">유족연금 — 세금은 없지만, '선택'이 남습니다</div>
+    <div class="sec-sub">국민연금 기준 · 상속세·소득세 모두 비과세이지만 어느 연금을 받을지는 유족이 직접 정해야 합니다</div></div>
+  </div>
+  <div class="sec-body">
+    <div class="info-box">유족연금은 상속재산에 포함되지 않고(상증법 §10 단서) 소득세도 비과세라 세금 문제는 없습니다. 하지만 배우자와 사별하면 <strong>어느 연금을 받을지 선택해야 하는 순간</strong>이 반드시 오고, 이 선택은 평생 매월 받는 금액을 좌우합니다.</div>
+
+    <div class="sub-title">얼마를, 어떻게 받나</div>
+    <div class="table-overflow"><table>
+      <tr><th>사망자의 국민연금 가입기간</th><th>유족연금액</th></tr>
+      <tr><td>10년 미만</td><td class="bold">기본연금액의 40% + 부양가족연금액</td></tr>
+      <tr><td>10년 이상 ~ 20년 미만</td><td class="bold">기본연금액의 50% + 부양가족연금액</td></tr>
+      <tr><td>20년 이상</td><td class="bold">기본연금액의 60% + 부양가족연금액</td></tr>
+    </table></div>
+    <div class="tip-box">유족연금은 일시금이 아니라 <strong>매월, 평생 지급되는 연금</strong>입니다(재혼 시 수급권 소멸). 1순위 유족은 배우자(사실혼 포함)입니다. 유족이 없거나 요건이 안 되는 경우에만 사망일시금·반환일시금으로 지급됩니다. 또한 노령연금을 받던 분이 사망한 경우, 유족연금은 <strong>사망자가 받던 노령연금액을 초과할 수 없습니다</strong>.</div>
+
+    <div class="sub-title">다른 소득과 합산되나 — 연금 종류별 소득세 비교</div>
+    <div class="table-overflow"><table>
+      <tr><th style="width:26%">연금 종류</th><th>소득세 취급</th></tr>
+      <tr><td class="td-label">유족연금 (국민연금 등 공적연금)</td><td><strong>비과세</strong>(소득세법 §12) — 근로소득 등 다른 소득이 있어도 <strong>종합소득에 합산되지 않고</strong>, 연말정산에도 잡히지 않습니다. 건강보험 소득 산정에도 반영되지 않습니다.</td></tr>
+      <tr><td class="td-label">본인 노령연금 (국민연금)</td><td><strong>과세</strong> — 2002년 이후 납입분에서 나온 연금은 연금소득으로 공단이 원천징수·연말정산하며, 과세대상 연금액이 연 350만원을 넘으면서 근로소득 등 다른 종합소득이 있으면 <strong>다음 해 5월 합산신고</strong> 대상입니다.</td></tr>
+      <tr><td class="td-label">사적연금 (연금저축·IRP)</td><td>공적연금과 <strong>합산하지 않고 별도 계산</strong> — 연 1,500만원(세액공제분+운용수익 기준) 이하는 3.3~5.5% 저율 분리과세, 초과 시 종합과세 또는 16.5% 분리과세 중 선택.</td></tr>
+    </table></div>
+
+    <div class="sub-title">부부가 모두 국민연금에 가입했다면 — 중복급여 조정</div>
+    <p style="margin:6px 0 10px;">한 사람에게 두 개의 연금 수급권(본인 노령연금 + 배우자 사망으로 인한 유족연금)이 생기면 둘 다 받을 수 없고 <strong>하나를 선택</strong>해야 합니다(국민연금법 §56).</p>
+    <div class="card2">
+      <div class="card2-item g">
+        <div class="card2-title">선택 A — 본인 노령연금</div>
+        <p><strong>본인 노령연금 100% + 유족연금의 30%</strong>를 받습니다. 본인 연금이 어느 정도 되는 분들은 대부분 이쪽이 유리합니다.</p>
+      </div>
+      <div class="card2-item r">
+        <div class="card2-title">선택 B — 유족연금</div>
+        <p><strong>유족연금 100%</strong>만 받고, 본인 노령연금은 <strong>전액 정지</strong>됩니다. 본인 가입기간이 짧아 노령연금이 적은 경우에 검토합니다.</p>
+      </div>
+    </div>
+    <div class="tip-box">판단 기준: <strong>본인 노령연금이 유족연금의 70%보다 크면 선택 A가 유리</strong>합니다. 예) 본인 노령연금 80만원, 배우자 유족연금 100만원 → A = 80만 + 30만 = <strong>110만원</strong> vs B = 100만원 → A 선택. 예) 본인 40만원, 유족 100만원 → A = 70만원 vs B = 100만원 → B 선택.<br><br>단, 이 비교는 <strong>세전 기준</strong>입니다. 선택 A의 본인 노령연금 부분은 과세·건강보험 소득 반영 대상이지만, 유족연금(A의 30% 가산분 포함)은 비과세·건보 미반영이라, 근로소득이 있어 세율이 높거나 피부양자 판정이 걸린 분은 <strong>세후 경계선이 70%보다 위로 올라갑니다.</strong> 경계선 근처라면 반드시 세후로 비교해야 합니다.</div>
+
+    <div class="sub-title">언제 선택의 순간이 오나 — 연령대별 시나리오</div>
+    <div class="table-overflow"><table>
+      <tr><th style="width:34%">상황</th><th>진행</th></tr>
+      <tr><td class="td-label">50대 부부, 각자 가입 중<br>한 분 사망</td><td>생존 배우자는 아직 본인 연금 수급 전이므로 우선 <strong>유족연금을 청구해 수령</strong>합니다. 이후 <strong>본인 노령연금 개시 연령에 도달하는 시점</strong>에 위 A/B 선택 문제가 발생합니다. 본인 가입을 계속 유지·납부할수록 A의 값이 커집니다.</td></tr>
+      <tr><td class="td-label">70대 부부, 각자 수급 중<br>한 분 사망</td><td>사망 즉시 두 수급권이 겹치므로 <strong>바로 A/B를 선택</strong>해야 합니다. 국민연금공단(1355)에서 두 금액을 비교 조회한 뒤 유리한 쪽으로 청구하세요.</td></tr>
+    </table></div>
+
+    <div class="warn-box">
+      · 연금 급여를 받을 권리는 <strong>5년간 청구하지 않으면 소멸</strong>하므로 사별 후 유족연금 청구를 미루지 마세요.<br>
+      · 공무원·사학·군인연금 등 <strong>직역연금은 지급률·중복조정 규정이 다릅니다</strong>(예: 공무원연금은 중복지급률 50%). 사망일이 다른 공적연금 가입기간 중이면 국민연금 유족연금이 지급되지 않는 경우도 있으니 가입 이력을 함께 확인해야 합니다.<br>
+      · 같은 사망을 사유로 산재 유족급여 등을 받는 경우 국민연금 유족연금은 1/2만 지급됩니다.
+    </div>
+  </div>
+</div>
+
 <!-- 준비서류 체크리스트 -->
 <div class="sec head-blue" id="checklist">
   <div class="sec-head">
@@ -635,6 +932,9 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
       <a href="https://taxmancall.com/inheritance-tax-checklist/" style="display:inline-block;background:var(--b1);color:#fff;text-decoration:none;padding:10px 20px;border-radius:8px;font-size:13px;font-weight:700;">✓ 자가진단하고 PDF로 정리하기</a>
     </div>
     <div class="info-box">아래 목록을 눈으로 확인만 하셔도 되고, 위 버튼을 누르면 항목별로 체크하면서 준비 현황을 PDF로 정리해 사무소로 바로 보내실 수 있습니다.</div>
+    <div class="tip-box"><strong>상속재산분할협의서 양식</strong> — 아직 협의서를 작성하지 않으셨다면 양식을 내려받아 사용하세요. 부동산 상속등기·취득세 신고·배우자공제 적용에 모두 쓰이는 서류입니다.
+      <a href="forms/division-agreement.docx" download="상속재산분할협의서_양식.docx" style="color:var(--b1);font-weight:700;">Word로 받기</a> ·
+      <a href="forms/division-agreement.pdf" download="상속재산분할협의서_양식.pdf" style="color:var(--b1);font-weight:700;">PDF로 받기 (인쇄용)</a></div>
 
     <div class="check-cat">① 기본서류</div>
     <div style="font-size:13px;font-weight:700;color:var(--b1);margin:10px 0 2px;">피상속인(돌아가신 분) 서류</div>
@@ -650,10 +950,12 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
       <div class="check-item"><span class="check-box"></span>상속인 전원 주민등록등본 <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span> <span class="check-note">(세대 구성 확인용)</span></div>
       <div class="check-item"><span class="check-box"></span>상속재산분할협의서 <span class="check-note">(해당시)</span> <span class="check-note">(작성한 경우)</span></div>
       <div class="check-item"><span class="check-box"></span>대습상속 관련 확인서류 <span class="check-note">(해당시)</span></div>
+      <div class="check-item"><span class="check-box"></span>특별대리인 선임 심판서 <span class="check-note">(해당시)</span> <span class="check-note">(미성년 상속인과 친권자가 공동상속인인 경우)</span></div>
     </div>
     <div style="font-size:13px;font-weight:700;color:var(--b1);margin:10px 0 2px;">공통 서류</div>
     <div class="check-grid">
-      <div class="check-item"><span class="check-box"></span>가족관계증명서·기본증명서 <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span> <span class="check-note">(피상속인·상속인 전원, 상세)</span></div>
+      <div class="check-item"><span class="check-box"></span>피상속인 가족관계등록부 5종 증명서 <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span> <span class="check-note">(가족관계·기본·혼인관계·입양관계·친양자입양관계, 모두 상세)</span></div>
+      <div class="check-item"><span class="check-box"></span>상속인 전원 가족관계증명서·기본증명서 <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span> <span class="check-note">(상세)</span></div>
       <div class="check-item"><span class="check-box"></span>안심상속 원스톱서비스 결과지 <span style="font-size:11px;font-weight:700;color:var(--b1);">(필수)</span> <span class="check-note">(정부24·주민센터, 사망월 말일부터 6개월 내 신청)</span></div>
     </div>
 
@@ -784,6 +1086,17 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
     <div class="qa-item"><div class="qa-q">Q. 상속세는 상속인 각자 얼마씩 내나요?</div><div class="qa-a">전체 유산 기준으로 세액을 먼저 계산한 뒤, 상속인들이 실제 받은 재산 비율대로 나누어 냅니다. 상속인 전원이 자신의 상속분 한도 내에서 연대납세의무를 집니다.</div></div>
     <div class="qa-item"><div class="qa-q">Q. 아버지 돌아가시기 직전에 예금을 인출했는데 문제가 되나요?</div><div class="qa-a">사망 전 1년 이내 2억원, 2년 이내 5억원 이상 인출되었고 용도가 불분명하면 추정상속재산으로 과세될 수 있습니다. 인출 사유와 사용처를 정리한 자료를 준비해두세요.</div></div>
     <div class="qa-item"><div class="qa-q">Q. 상속포기를 하면 대습상속인이 생기나요?</div><div class="qa-a">아닙니다. 대습상속은 선순위 상속인이 상속개시 '전'에 사망하거나 결격된 경우에만 발생합니다. 상속포기는 상속개시 '후'의 의사표시이므로 대습상속 사유가 아니며, 그 다음 순위자가 본위상속을 받습니다.</div></div>
+    <div class="qa-item"><div class="qa-q">Q. 유언으로 손주에게 아파트를 주면 증여세인가요, 상속세인가요?</div><div class="qa-a">상속세입니다. 유증·사인증여로 받은 재산은 받는 사람이 상속인이 아니어도 상속세로 과세됩니다(상증법 §2). 다만 자녀가 생존해 있는 상태에서 손주에게 직접 남기면 산출세액의 30%(미성년자 20억 초과 시 40%)가 할증되고, 상속인이 아닌 자에 대한 유증·사인증여분은 상속공제 종합한도에서 빠지며, 특정유증·사인증여라면 취득세도 상속세율(3.16%)이 아닌 증여세율(4.0%)이 적용될 수 있어 종합적인 설계가 필요합니다.</div></div>
+    <div class="qa-item"><div class="qa-q">Q. 유언대용신탁으로 하면 상속세를 아낄 수 있나요?</div><div class="qa-a">아닙니다. 사후수익자가 받는 신탁 수익권도 상속세 과세대상이라 세액은 같습니다. 유언대용신탁의 가치는 절세가 아니라 집행과 설계에 있습니다 — 유언 무효 위험이 없고, 사망 즉시 수탁자가 계약대로 집행하며, "배우자 다음엔 자녀"식 2단계 승계나 미성년 자녀 분할지급처럼 유언으로는 불가능한 설계가 가능합니다. 다만 신탁보수가 계속 발생하고, 부동산 신탁의 취득세는 계약서의 수익권 문언에 따라 달라지므로 설정 전 검토가 필요합니다.</div></div>
+    <div class="qa-item"><div class="qa-q">Q. 아버지가 유언으로 재산 배분을 정해두셨는데, 형제들 생각은 다릅니다. 유언대로만 받아야 하나요?</div><div class="qa-a">아닙니다. 유증받은 사람을 포함한 상속인 전원이 합의하면 유언과 다르게 협의분할할 수 있고, 상속세 신고기한(6개월) 내에 마치면 상속인 간 증여세 문제도 없습니다(상증법 §4③). 전원 합의가 안 되면 유류분반환청구(안 날부터 1년)가 남습니다. 다만 유언대용신탁으로 정해진 부분은 계약이라 상속인 합의로 뒤집을 수 없고, 받은 사람이 임의로 나눠주면 증여세가 새로 과세됩니다.</div></div>
+    <div class="qa-item"><div class="qa-q">Q. 상속세 신고를 마쳤는데, 상속받은 상가 월세는 세금을 또 내야 하나요?</div><div class="qa-a">네, 별개의 세금입니다. 상속세는 재산을 물려받은 것에 대한 세금이고, 상속개시일 이후 그 재산에서 나오는 월세·이자·배당은 상속인의 소득이라 다음 해 5월 종합소득세로 신고합니다. 상가라면 사업자등록 승계와 부가가치세 신고도 필요합니다. 아울러 사망연도 1월 1일부터 사망일까지 피상속인에게 발생한 소득은 상속인이 대신 신고해야 하며, 기한은 상속세와 같은 6개월입니다.</div></div>
+    <div class="qa-item"><div class="qa-q">Q. 상속받은 아파트를 바로 팔면 양도세가 많이 나오나요?</div><div class="qa-a">취득가액이 상속세 신고 시 평가액이라 상속 직후 양도하면 양도차익 자체가 거의 없는 경우가 많고, 단기양도 중과 판정 보유기간은 피상속인이 취득한 날부터 계산하므로 단기 중과세율도 피할 수 있습니다. 본인 주택이 따로 있어도 일반주택 양도 시 상속주택은 없는 것으로 보는 비과세 특례(소령 §155②)가 있습니다. 다만 장기보유특별공제는 상속개시일부터 새로 계산되므로, 처분 계획이 있다면 상속세 평가 단계부터 함께 설계하는 것이 유리합니다.</div></div>
+    <div class="qa-item"><div class="qa-q">Q. 남편(아내)이 받던 국민연금은 어떻게 되나요? 저도 제 연금이 있는데요.</div><div class="qa-a">배우자 사망으로 유족연금 수급권이 생깁니다(가입기간에 따라 기본연금액의 40~60%). 본인도 노령연금을 받고 있거나 받게 되면 둘 중 하나를 선택해야 하는데, 본인 노령연금을 고르면 유족연금의 30%가 추가되고, 유족연금을 고르면 본인 연금은 전액 정지됩니다. 대체로 본인 연금이 유족연금의 70%보다 크면 본인 연금 선택이 유리합니다. 유족연금은 상속세·소득세 모두 비과세입니다.</div></div>
+    <div class="qa-item"><div class="qa-q">Q. 직장에 다니는데 유족연금을 받으면 연말정산이나 종합소득세에 합산되나요?</div><div class="qa-a">아닙니다. 공적연금 관련법에 따른 유족연금은 소득세법 §12의 비과세소득이라 근로소득과 합산되지 않고 연말정산에도 반영되지 않으며, 건강보험 소득 산정에서도 빠집니다. 반면 본인의 노령연금(2002년 이후 납입분)은 과세 연금소득이라 다른 종합소득이 있으면 5월에 합산신고하고, 연금저축·IRP 같은 사적연금은 공적연금과 별도로 연 1,500만원 기준으로 분리과세·종합과세를 판단합니다.</div></div>
+    <div class="qa-item"><div class="qa-q">Q. 아버지가 실종되신 지 오래인데, 상속 처리를 할 수 있나요?</div><div class="qa-a">가정법원에 실종선고를 청구하면 됩니다. 생사불명 5년(위난은 1년)이 지났으면 실종선고로 사망이 간주되어 상속이 개시됩니다. 이때 민법상 사망 시점은 실종기간 만료일이지만, 상속세 신고기한(6개월)과 재산 평가는 실종선고일을 기준으로 합니다. 반대로 상속인 중에 생사불명인 형제가 있어 분할협의가 안 되는 경우에도, 그 형제에 대한 부재자 재산관리인 선임이나 실종선고 절차가 필요합니다.</div></div>
+    <div class="qa-item"><div class="qa-q">Q. 부모님이 같은 사고로 함께 돌아가셨습니다. 상속은 어떻게 되나요?</div><div class="qa-a">동일한 위난으로 사망하여 선후를 알 수 없으면 동시에 사망한 것으로 추정되고(민법 §30), 두 분 사이에는 상속이 일어나지 않아 각자의 재산이 각자의 상속인에게 별도로 상속됩니다. 이 경우 배우자공제를 적용할 수 없어 세부담이 커질 수 있습니다. 다만 추정이라서 사망진단서 등으로 사망 시각의 선후가 입증되면 달라지므로, 시각 기재를 반드시 확인해야 합니다. 자녀가 부모와 동시사망한 경우 그 자녀의 배우자·자녀는 대습상속을 받을 수 있습니다.</div></div>
+    <div class="qa-item"><div class="qa-q">Q. 제가 아버지 간병을 도맡아 했습니다. 상속을 더 받을 수 있나요?</div><div class="qa-a">기여분 제도(민법 §1008의2)가 있습니다. 다만 통상의 부양 수준으로는 부족하고, 직장을 그만두고 전담 간병했거나 병원비·요양비를 홀로 부담한 것처럼 '특별한' 부양이 입증되어야 합니다. 우선 공동상속인 전원의 협의로 기여분을 반영해 분할하는 것이 원칙이고, 협의가 안 되면 다른 공동상속인들을 상대방으로 하여 그 주소지 관할 가정법원에 상속재산분할심판과 병합해 청구합니다(조정 전치, 전자소송 가능). 분할협의서에 전원이 날인해 분할이 끝나면 더는 기여분을 주장할 수 없고, 심판에서는 법원이 정한 청구 기간을 넘기면 각하될 수 있으니 시기를 놓치지 마세요. 간병 일지, 진료기록, 병원비·간병비 이체내역, 동거 증빙을 지금부터 모아두는 것이 핵심입니다.</div></div>
+    <div class="qa-item"><div class="qa-q">Q. 미성년 자녀 몫은 제가 부모니까 대신 도장 찍으면 되지 않나요?</div><div class="qa-a">안 됩니다. 부모도 공동상속인이면 이해상반행위(민법 §921)에 해당하여, 가정법원에서 선임한 특별대리인이 자녀를 대리해야 합니다. 특별대리인 없이 부모가 대신 날인한 분할협의는 무효이므로, 상속등기가 반려되거나 이후 협의 효력이 다투어질 수 있습니다. 자녀가 여러 명이면 1명당 1명씩 따로 선임합니다.</div></div>
     <div class="qa-item"><div class="qa-q">Q. 형제자매끼리 상속재산을 다르게 나누면 세금도 달라지나요?</div><div class="qa-a">전체 상속세액은 동일하지만, 배우자공제는 배우자가 실제 상속받은 금액에 따라 달라지므로 분할 방법에 따라 총 세액이 달라질 수 있습니다. 분할협의 전 시뮬레이션이 필요합니다.</div></div>
     <div class="qa-item"><div class="qa-q">Q. 상속세 낼 현금이 없으면 어떻게 하나요?</div><div class="qa-a">연부연납(최대 10년, 가업상속재산은 최대 20년) 또는 물납 제도를 활용할 수 있습니다. 담보 제공, 이자상당액 등 요건을 미리 확인하세요.</div></div>
     <div class="qa-item"><div class="qa-q">Q. 유산취득세로 바뀐다는 뉴스를 봤는데 지금 적용되나요?</div><div class="qa-a">2025년 세법개정 논의에서 유산취득세 전환 방안이 검토되었지만, 사회적 합의를 더 모색하기로 하고 이번 개정에는 반영되지 않았습니다. 현재는 기존 유산세 방식이 그대로 적용됩니다.</div></div>
@@ -821,5 +1134,25 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
   정확한 세무 처리는 담당 세무사와 상담하시기 바랍니다.
 </footer>
 
+<button id="topBtn" type="button" aria-label="맨 위로">▲</button>
+<script>
+(function(){
+  var btn = document.getElementById("topBtn");
+  if (!btn) return;
+  var ticking = false;
+  function update(){
+    if (window.scrollY > 500) btn.classList.add("show");
+    else btn.classList.remove("show");
+    ticking = false;
+  }
+  window.addEventListener("scroll", function(){
+    if (!ticking){ requestAnimationFrame(update); ticking = true; }
+  }, { passive: true });
+  btn.addEventListener("click", function(){
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+  update();
+})();
+</script>
 </body>
 </html>
