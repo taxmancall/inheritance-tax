@@ -216,13 +216,13 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
 @media(max-width:600px){#printBtn{right:14px;bottom:72px;padding:9px 13px;font-size:12px;}}
 
 /* 인쇄(PDF 저장) 전용 */
-@page{size:A4;margin:0;}
+@page{size:A4;margin:8mm 0;}
 @media print{
   #topBtn,#printBtn,.nav-bar{display:none!important;}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
   html,body{margin:0;background:#fff;}
   /* @page margin 0 → 브라우저 머리글·바닥글(날짜·URL·쪽번호) 제거. 여백은 패딩으로 */
-  .container{max-width:100%;padding:10mm 11mm 16mm;}
+  .container{max-width:100%;padding:2mm 11mm 6mm;}
   header{background:linear-gradient(135deg,#2E7D4F 0%,#3E9463 100%)!important;}
   .header-inner{padding:8mm 11mm 4mm;}
   .sec{box-shadow:none;border:1px solid #d5dfe8;margin-bottom:14px;}
@@ -235,8 +235,8 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
   .tip-box,.warn-box,.danger-box,.info-box,.orange-box,.card2,.check-grid,.qa-item,.deduct-grid,.flow{break-inside:avoid;page-break-inside:avoid;}
   a{color:inherit;}
   /* 매 쪽 하단 사무소 푸터 */
-  #printFooter{display:block;position:fixed;bottom:4mm;left:0;right:0;text-align:center;
-    font-size:9px;color:#8a97a5;letter-spacing:.3px;}
+  #printFooter{display:block;position:fixed;bottom:1mm;left:0;right:0;text-align:center;
+    font-size:8px;color:#9aa7b3;letter-spacing:.3px;}
 }
 #printFooter{display:none;}
 #printToc{display:none;}
@@ -900,6 +900,7 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
       <tr><td>무주택 상속인</td><td>상속개시일 현재 무주택자인 직계비속이 상속받을 것</td></tr>
       <tr><td>공제액</td><td>주택가액(채무 차감 후)의 100% (최대 6억원)</td></tr>
     </table></div>
+    <div class="tip-box">기준을 정확히 — ① 동거기간 10년은 <strong>실제로 같은 주택에서 함께 거주</strong>한 기간이며(주소만 옮겨두고 실거주하지 않으면 인정되지 않습니다), 상속인이 <strong>미성년자인 기간은 제외</strong>하고 계산합니다. ② 이사를 했더라도 함께 이사해 계속 동거했다면 기간은 이어집니다. ③ 무주택 여부는 <strong>상속개시일 현재</strong> 기준이고, 피상속인과 공동으로 그 1주택을 보유한 경우에도 공제가 인정됩니다.</div>
 
     <div class="info-box">
       <div class="box-title">상속공제 종합한도 (§24)</div>
