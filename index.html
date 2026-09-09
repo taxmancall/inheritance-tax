@@ -202,6 +202,28 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
 #topBtn:hover{transform:translateY(-2px);}
 #topBtn:active{transform:translateY(0);}
 @media(max-width:600px){#topBtn{right:14px;bottom:16px;width:44px;height:44px;}}
+
+/* PDF 저장 버튼 */
+#printBtn{position:fixed;right:18px;bottom:82px;border:none;border-radius:24px;
+  background:#fff;color:var(--b1);border:1.5px solid var(--b1);padding:10px 16px;
+  font-size:13px;font-weight:700;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.18);
+  z-index:1000;transition:transform .15s;}
+#printBtn:hover{transform:translateY(-2px);}
+@media(max-width:600px){#printBtn{right:14px;bottom:72px;padding:9px 13px;font-size:12px;}}
+
+/* 인쇄(PDF 저장) 전용 */
+@media print{
+  #topBtn,#printBtn,.nav-bar{display:none!important;}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  body{background:#fff;}
+  .container{max-width:100%;padding:0;}
+  .sec{box-shadow:none;border:1px solid #d5dfe8;margin-bottom:14px;}
+  .sec-head{break-after:avoid;page-break-after:avoid;}
+  .sub-title{break-after:avoid;page-break-after:avoid;}
+  table,.tip-box,.warn-box,.danger-box,.info-box,.orange-box,.card2,.check-grid,.qa-item,.deduct-grid,.flow{break-inside:avoid;page-break-inside:avoid;}
+  a{color:inherit;}
+  header{background:var(--g1)!important;}
+}
 </style>
 </head>
 <body>
@@ -943,7 +965,7 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
     <div class="sub-title">언제 선택의 순간이 오나 — 연령대별 시나리오</div>
     <div class="table-overflow"><table>
       <tr><th style="width:34%">상황</th><th>진행</th></tr>
-      <tr><td class="td-label">50대 부부, 각자 가입 중<br>한 분 사망</td><td>생존 배우자는 아직 본인 연금 수급 전이므로 우선 <strong>유족연금을 청구해 수령</strong>합니다. 이후 <strong>본인 노령연금 개시 연령에 도달하는 시점</strong>에 위 A/B 선택 문제가 발생합니다. 본인 가입을 계속 유지·납부할수록 A의 값이 커집니다.</td></tr>
+      <tr><td class="td-label">50대 부부, 각자 가입 중<br>한 분 사망</td><td>생존 배우자는 아직 본인 연금 수급 전이므로 우선 <strong>유족연금을 청구해 수령</strong>합니다. 이 유족연금은 일시불이 아니라 <strong>매월 지급</strong>되며, 금액은 사망 배우자의 가입기간에 따라 기본연금액의 40~60% + 부양가족연금액입니다(구체적 월 금액은 공단 1355에서 조회). 이후 <strong>본인 노령연금 개시 연령에 도달하는 시점</strong>에 위 A/B 선택 문제가 발생합니다. 본인 가입을 계속 유지·납부할수록 A의 값이 커집니다.</td></tr>
       <tr><td class="td-label">70대 부부, 각자 수급 중<br>한 분 사망</td><td>사망 즉시 두 수급권이 겹치므로 <strong>바로 A/B를 선택</strong>해야 합니다. 국민연금공단(1355)에서 두 금액을 비교 조회한 뒤 유리한 쪽으로 청구하세요.</td></tr>
     </table></div>
 
@@ -1170,6 +1192,7 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
   정확한 세무 처리는 담당 세무사와 상담하시기 바랍니다.
 </footer>
 
+<button id="printBtn" type="button" onclick="window.print()" aria-label="PDF로 저장">📄 PDF 저장</button>
 <button id="topBtn" type="button" aria-label="맨 위로">▲</button>
 <script>
 (function(){
