@@ -216,7 +216,9 @@ footer strong{color:#fff;display:block;font-size:15px;margin-bottom:6px}
 @media(max-width:600px){#printBtn{right:14px;bottom:72px;padding:9px 13px;font-size:12px;}}
 
 /* 인쇄(PDF 저장) 전용 */
-@page{size:A4;margin:8mm 0;}
+@page{size:A4;margin:8mm 0;
+  @bottom-center{content:counter(page);font-family:"Noto Sans KR",sans-serif;font-size:9px;color:#8a95a0;}
+}
 @media print{
   #topBtn,#printBtn,.nav-bar{display:none!important;}
   *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
